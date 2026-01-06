@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don-Bosco institute</title>
+    <style>
+        /* CSS - STYLING */
+        
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: blue; /* School Blue */
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+        }
+
+        nav div {
+            font-size: 20px;
+        }
+
+        .logo {
+            font-size: 3.5%;
+            font-weight: normal;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00; /* Gold Highlight */
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #003366;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero button {
+            background-color: #ffcc00;
+            color: #003366;
+            border: none;
+            padding: 10px 25px;
+            font-size: 2.5rem;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .hero button:hover {
+            background-color: #e6b800;
+        }
+
+        /* Information Cards */
+        .container {
+            width: 100%;
+            margin: auto;
+            padding: 50px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #003366;
+        }
+
+        .card-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            flex: 1;
+            text-align: center;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: #004080;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: #e9ecef;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .submit-btn {
+            background-color: #003366;
+            color: lightblue;
+            border: none;
+            padding: 90px;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: pink;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 500px) {
+            .card-grid {
+                flex-direction: column;
+            }
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div style="color: aqua;">Don-Bosco institute of technology</div>
+        <h1><center><img src="don bosco.png" alt="This is the logo of don-bosco institute of technology"></center></h1><br><br>
+        
+        <ul>
+            <li><a href=Home>home</a></li>
+            <li><a href=About>About</a></li>
+            <li><a href=contact>contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header id="home" class="hero">
+        <h1 style="color: #ffcc00;">Welcome to Don-Bosco Institute of Technology, South Sudan Western Equatoria State Maridi County</h1>
+        <img src="elia.jpg" alt=""><br><br>
+        <p style="font-size: x-large;" bold>Established since 2010 to Empowering the young generation to achieve their dreams in the flied of there Speclization.</p>
+        <!-- Calls JavaScript function -->
+        <button onclick="enrollAlert()">Enroll Now</button>
+    </header>
+
+    <!-- ABOUT / CARDS SECTION -->
+    <section id="about" class="container">
+        <h2 style="color: #222;" class="section-title">Why Choose Us?</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3 style="color:#003366;">Vission</h3>
+                <p style="color: #004080;">To establish comprehensive hard and soft infrastructure in every community.</p>
+                <img src="Elias 2.jpg" alt="">
+            </div>
+            <div class="card">
+                <h3 style="color: #003366;">Mission</h3>
+                <p style="color: #004080;">Our mission is to accomplish hard word, team spirit and determination</p>
+                <img src="old days 1.jpg" alt="">
+            </div>
+            <div class="card">
+                <h3 style="color: #003366;">Community</h3>
+                <p style="color: #004080;">A safe, inclusive environment where every student most learning and again both soft and hard skills.</p>
+                <img src="my dayz.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+<!-- CONTACT FORM SECTION -->
+<section id="contact" class="contact-section">
+    <h2 class="section-title">Contact Us</h2>
+    
+    
+    <!-- Updated Form Tag: method="POST" and action="submit_contact.php" -->
+    <form action="submit_contact.php" method="POST">
+        
+        <!-- Added name="name" -->
+        <input type="text" name="name" placeholder="Your Name" required>
+        
+        <!-- Added name="email" -->
+        <input type="email" name="email" placeholder="Your Email" required>
+        
+        <!-- Added name="message" -->
+        <textarea name="message" rows="4" placeholder="Message" required></textarea><br><br>
+        <td style="color: #222;">programs we do offer</td>
+         <select>
+            <option value="radio">Morning Program</option>
+            <option value="radio">Afternoon program</option>
+         </select>
+        
+        <button onclick="alert(`Message send successifully`)">Send Message</button><br><br>
+        <h4><center><img src="1741274601407.jpg" alt=""></center></h4><br><br>
+        
+    </form>
+</section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; <span id="year"></span>Don-Bosco Institute of Technology,  Western Equatoria State, Maridi County South Sudan. All rights reserved.</p>
+    </footer>
+    
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Function to show an alert when 'Enroll Now' is clicked
+        function enrollAlert() {
+            alert("Thank you for your interest! Please visit our Admissions Office or fill out the contact form.");
+        }
+
+        // Dynamic Date: Automatically sets the current year in the footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
